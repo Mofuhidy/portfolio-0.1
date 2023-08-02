@@ -20,7 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #faf5f6;
-  padding: 0 10rem;
+  padding: 0 1rem;
 }
 
 nav li,
@@ -29,5 +29,15 @@ p {
 }
 
 .paragraph {
-  width: 35rem;
+  width: 18rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 0 10rem;
+  }
+
+  .paragraph {
+    width: 35rem;
+  }
 }
