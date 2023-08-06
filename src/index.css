@@ -20,7 +20,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #faf5f6;
-  padding: 0 1rem;
+
   background-image: url(./assets/sl_072622_51930_13.jpg);
   background-blend-mode: color-burn;
   background-position: center;
@@ -34,16 +34,19 @@ button {
 }
 
 .myName {
-  font-family: "Roboto Slab";
+  font-family: "Playfair Display";
 }
 
 .paragraph {
   width: 18rem;
 }
 
+.underline {
+  text-decoration-color: #489383;
+}
+
 @media screen and (min-width: 768px) {
   body {
-    padding: 0 10rem;
     background-image: url(./assets/sl_072622_51930_13.jpg);
     background-blend-mode: color-burn;
   }

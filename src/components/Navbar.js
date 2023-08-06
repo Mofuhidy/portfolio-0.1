@@ -9,7 +9,7 @@ function Navbar() {
     setNav(!nav);
   };
   return (
-    <nav className=" h-20 flex justify-between items-center ">
+    <nav className=" h-20 flex justify-between items-center md:px-20  py-0 px-4">
       <h1 className=" text-xl">Fuhidy</h1>
       <ul className=" gap-4 items-center hidden sm:flex">
         <li><a className="" href="#home">Hello</a></li>
@@ -26,14 +26,14 @@ function Navbar() {
       )}
 
       {/* second nav */}
-      <ul className={`h-[100vh] pt-32 gap-12 fixed top-[0px] flex flex-col w-full sm:hidden bg-background z-40 duration-1000 ${
-        nav ? 'right-[0px]' : 'right-[-100vw]'
+      <ul className={`h-[100vh] pt-32 gap-12 fixed top-[0px] flex flex-col w-full sm:hidden bg-background z-40 duration-1000 ease-in-out overflow-y-hidden ${
+        nav ? 'right-[0px] opacity-100' : 'right-[-100vw] opacity-50'
       } `}
       >
-        <li><a className="p-20 sm-text-lg text-text text-4xl" href="#home">Hello</a></li>
-        <li><a className="p-20 sm-text-lg text-text text-4xl" href="#portfolio">Portfolio</a></li>
-        <li><a className="p-20 sm-text-lg text-text text-4xl" href="#service">Services</a></li>
-        <li><a className="p-20 sm-text-lg text-text text-4xl" href="#contact">Contact</a></li>
+        <li><a className="p-20 sm-text-lg text-text text-4xl underline" href="#home">Hello</a></li>
+        <li><a className="p-20 sm-text-lg text-text text-4xl underline" href="#portfolio">Portfolio</a></li>
+        <li><a className="p-20 sm-text-lg text-text text-4xl underline" href="#service">Services</a></li>
+        <li><a className="p-20 sm-text-lg text-text text-4xl underline" href="#contact">Contact</a></li>
         <img src={eclipse} alt="circle" className="h-10 pr-60" />
       </ul>
     </nav>

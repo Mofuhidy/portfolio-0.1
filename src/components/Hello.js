@@ -5,9 +5,9 @@ import { FaAngellist } from 'react-icons/fa';
 
 function Hello() {
   return (
-    <section className="landing">
+    <section className="landing md:px-20 py-0 px-4">
       <div className="flex flex-col sm:flex-row sm:items-center items-start sm:gap-10 gap-5 justify-around">
-        <div className=" mt-24 flex flex-col gap-5 sm:relative md:relative">
+        <div className=" mt-24 flex flex-col sm:gap-5 sm:relative md:relative">
           <h1 className=" text-5xl sm:text-8xl font-semibold text-primary myName">
             <p className=" text-sm sm:text-base text-text font-normal">Hello, I’m</p>
             Mohammed
@@ -15,7 +15,7 @@ function Hello() {
             AlFuhidy
           </h1>
           <div className="callToAction flex items-center  mt-3 gap-5">
-            <button type="button" className="bg-gradient-to-r from-primary to-accent text-background py-3 px-4 rounded-3xl">See my Works</button>
+            <button type="button" className="order-last bg-gradient-to-r from-primary to-accent text-background py-3 px-4 rounded-3xl hidden sm:block">See my Works</button>
             <div className="order-last text-2xl sm:text-4xl sm:flex gap-4 text-accent hidden">
               <a href="#linkedin" target="_blank">
                 <AiFillLinkedin />
@@ -35,13 +35,13 @@ function Hello() {
           </p>
           <p className="uppercase font-light sm:text-lg text-base">
             Based in Sana&lsquo;a
-            {' '}
             <br />
             YEMEN
           </p>
         </div>
 
-        <div className="order-last text-2xl sm:text-4xl flex gap-4  text-accent sm:hidden">
+        <button type="button" className="order-2 bg-gradient-to-r from-primary to-accent text-background py-3 px-4 rounded-3xl  sm:hidden">See my Works</button>
+        <div className="order-1 text-2xl sm:text-4xl flex gap-4  text-accent sm:hidden">
           <a href="#linkedin" target="_blank">
             <AiFillLinkedin />
           </a>
