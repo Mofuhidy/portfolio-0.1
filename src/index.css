@@ -14,7 +14,7 @@
 
 body {
   margin: 0;
-  font-family: "Playfair Display", "Poppins", -apple-system, BlinkMacSystemFont,
+  font-family: "Poppins", "Playfair Display", -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,12 +27,6 @@ body {
   background-size: contain;
 }
 
-nav li,
-p,
-button {
-  font-family: "Poppins", sans-serif;
-}
-
 .myName {
   font-family: "Playfair Display";
 }
@@ -43,6 +37,16 @@ button {
 
 .underline {
   text-decoration-color: #489383;
+}
+
+.projectCard::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0px;
+  opacity: 0.8;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1) 10%, rgba(0, 0, 0, 0.78) 80%);
 }
 
 @media screen and (min-width: 768px) {

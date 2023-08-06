@@ -6,7 +6,7 @@ import MansoryLayout from './MansoryLayout';
 function Projects() {
   return (
     <div className="mt-40 bg-primary min-h-screen md:px-20 py-0 px-4 relative">
-      <h2 className=" sm:text-[6.8rem] text-5xl text-background projectsTitle absolute sm:pt-5 pt-5 ">
+      <h2 className="myName sm:text-[6.8rem] text-5xl text-background projectsTitle absolute sm:pt-5 pt-5 ">
         Projects
       </h2>
       <div className=" w-full py-44 ">
