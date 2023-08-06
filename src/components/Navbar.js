@@ -14,7 +14,7 @@ function Navbar() {
       <ul className=" gap-4 items-center hidden sm:flex">
         <li><a className="" href="#home">Hello</a></li>
         <li><a className="" href="#portfolio">Portfolio</a></li>
-        <li><a className="" href="#service">Services</a></li>
+        <li><a className="" href="#aboutme">About me</a></li>
         <li className=" bg-primary text-background py-2 px-4 rounded-3xl"><a className="text-base sm-text-lg" href="#contact">Contact</a></li>
       </ul>
 
@@ -30,10 +30,10 @@ function Navbar() {
         nav ? 'right-[0px] opacity-100' : 'right-[-100%] opacity-50'
       } `}
       >
-        <li><a className="p-20 sm-text-lg text-text text-4xl underline" href="#home">Hello</a></li>
-        <li><a className="p-20 sm-text-lg text-text text-4xl underline" href="#portfolio">Portfolio</a></li>
-        <li><a className="p-20 sm-text-lg text-text text-4xl underline" href="#service">Services</a></li>
-        <li><a className="p-20 sm-text-lg text-text text-4xl underline" href="#contact">Contact</a></li>
+        <li><a className="p-20 sm-text-lg text-text text-4xl underline" onClick={showNav} href="#home">Hello</a></li>
+        <li><a className="p-20 sm-text-lg text-text text-4xl underline" onClick={showNav} href="#portfolio">Portfolio</a></li>
+        <li><a className="p-20 sm-text-lg text-text text-4xl underline" onClick={showNav} href="#aboutme">About me</a></li>
+        <li><a className="p-20 sm-text-lg text-text text-4xl underline" onClick={showNav} href="#contact">Contact</a></li>
         <img src={eclipse} alt="circle" className="h-10 pr-60" />
       </ul>
     </nav>

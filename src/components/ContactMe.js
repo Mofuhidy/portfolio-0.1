@@ -1,10 +1,10 @@
 function ContactMe() {
   return (
-    <div className="mt-40 bg-primary min-h-screen md:px-20 py-0 px-4 flex flex-col items-center">
+    <div className="mt-40 bg-primary min-h-screen md:px-20 py-0 px-4 flex flex-col items-center" id="contact">
       <article className="text-center mb-6 mt-10">
         <h2 className=" text-5xl sm:text-8xl font-semibold text-background pt-5 myName">
           <p className=" text-sm sm:text-base text-background font-normal">Interested in collaborating?</p>
-          About me
+          Contact me
         </h2>
         <p className="pt-5 text-background">
           Get in touch or email directly on
