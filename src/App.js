@@ -1,3 +1,4 @@
+import AboutMe from './components/AboutMe';
 import Hello from './components/Hello';
 import Navbar from './components/Navbar';
 import Projects from './components/Projects';
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Hello />
       <Projects />
+      <AboutMe />
     </div>
   );
 }

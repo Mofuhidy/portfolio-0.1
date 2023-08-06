@@ -9,7 +9,7 @@ function Projects() {
       <h2 className="myName sm:text-[6.8rem] text-5xl text-background projectsTitle absolute sm:pt-5 pt-5 ">
         Projects
       </h2>
-      <div className=" w-full py-44 ">
+      <div className=" w-full sm:py-44 py-32 ">
         <MansoryLayout />
       </div>
     </div>

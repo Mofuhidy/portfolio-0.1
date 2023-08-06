@@ -27,6 +27,10 @@ body {
   background-size: contain;
 }
 
+p {
+  font-family: "Poppins", sans-serif;
+}
+
 .myName {
   font-family: "Playfair Display";
 }

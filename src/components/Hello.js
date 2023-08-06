@@ -55,15 +55,6 @@ function Hello() {
         </div>
       </div>
 
-      {/* <p className=" text-xs sm:text-lg  paragraph">
-          I am a frontend developer!
-          I can help you build a product, feature or website.
-          Look through some of my work and experience!
-          If you like what you see and have a project you need coded, don’t hesitate and contact me.
-        </p> */}
-      {/* <img src={eclipse} alt="circle" className="h-14 absolute top-[-5rem] right-8 sm:hidden" />
-      <img src={eclipsBig} alt="circle" className="sm:absolute sm:top-[-5rem] sm:right-0 md:right-0
-      hidden sm:block" /> */}
     </section>
   );
 }

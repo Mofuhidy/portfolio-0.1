@@ -38,7 +38,7 @@ function MansoryItem({ project }) {
         "
       />
 
-      <div className="details z-50 transform block sm:opacity-0 sm:translate-y-0  group-hover:sm:opacity-100 group-hover:sm:translate-y-2 duration-300 ease-in">
+      <div className="details z-30 transform block sm:opacity-0 sm:translate-y-0  group-hover:sm:opacity-100 group-hover:sm:translate-y-2 duration-300 ease-in">
         <h2 className="mb-2 font-semibold text-background sm:text-xl text-lg">{project.title}</h2>
         <ul className="flex flex-wrap">
           {

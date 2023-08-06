@@ -26,8 +26,8 @@ function Navbar() {
       )}
 
       {/* second nav */}
-      <ul className={`h-[100vh] pt-32 gap-12 fixed top-[0px] flex flex-col w-full sm:hidden bg-background z-40 duration-1000 ease-in-out overflow-y-hidden ${
-        nav ? 'right-[0px] opacity-100' : 'right-[-100vw] opacity-50'
+      <ul className={`h-full pt-32 gap-12 fixed top-[0px] flex flex-col w-full sm:hidden bg-background z-40 duration-1000 ease-in-out overflow-y-hidden ${
+        nav ? 'right-[0px] opacity-100' : 'right-[-100%] opacity-50'
       } `}
       >
         <li><a className="p-20 sm-text-lg text-text text-4xl underline" href="#home">Hello</a></li>
