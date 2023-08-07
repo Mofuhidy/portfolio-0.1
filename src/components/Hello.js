@@ -15,14 +15,13 @@ function Hello() {
       <div className="flex flex-col sm:flex-row sm:items-center items-start sm:gap-10 gap-5 justify-around">
         <div className=" mt-24 flex flex-col sm:gap-5 sm:relative md:relative">
 
-          <h1 className=" text-5xl sm:text-8xl font-semibold text-primary myName intro" data-aos="fade-right">
+          <h1 className=" text-5xl sm:text-8xl font-semibold dark:text-textDarck text-primary myName intro" data-aos="fade-right">
             <p
-              className=" text-sm sm:text-base text-text font-normal"
+              className=" text-sm sm:text-base dark:text-textDarck text-text font-normal"
               data-aos="fade-right"
               data-aos-duration="1500"
             >
               Hello, I’m
-
             </p>
             Mohammed
             <br />
@@ -34,16 +33,16 @@ function Hello() {
               <button type="button" className="order-last bg-gradient-to-r from-primary to-accent text-background py-3 px-4 rounded-3xl hidden sm:block btn hover:shadow-sm hover:translate-y-[-4px] hover:transition-transform">See my Works</button>
             </a>
             <div className="order-last text-2xl sm:text-4xl sm:flex gap-4 text-accent hidden btn">
-              <a href="https://www.linkedin.com/in/mo-fuhidy/" target="_blank" rel="noreferrer" className=" hover:transition-opacity hover:duration-500 hover:text-text">
+              <a href="https://www.linkedin.com/in/mo-fuhidy/" target="_blank" rel="noreferrer" className="dark:text-accentDarck hover:transition-opacity hover:duration-500 hover:text-text dark:hover:text-textDarck">
                 <AiFillLinkedin />
               </a>
-              <a href="https://github.com/Mofuhidy" target="_blank" rel="noreferrer" className=" hover:transition-opacity hover:duration-500 hover:text-text">
+              <a href="https://github.com/Mofuhidy" target="_blank" rel="noreferrer" className="dark:text-accentDarck hover:transition-opacity hover:duration-500 hover:text-text dark:hover:text-textDarck">
                 <AiFillGithub />
               </a>
-              <a href="https://wellfound.com/u/mo-fuhidy" target="_blank" rel="noreferrer" className=" hover:transition-opacity hover:duration-500 hover:text-text">
+              <a href="https://wellfound.com/u/mo-fuhidy" target="_blank" rel="noreferrer" className="dark:text-accentDarck hover:transition-opacity hover:duration-500 hover:text-text dark:hover:text-textDarck">
                 <FaAngellist />
               </a>
-              <a href="https://www.t.me/mofuhidy" target="_blank" rel="noreferrer" className=" hover:transition-opacity hover:duration-500 hover:text-text">
+              <a href="https://www.t.me/mofuhidy" target="_blank" rel="noreferrer" className="dark:text-accentDarck hover:transition-opacity hover:duration-500 hover:text-text dark:hover:text-textDarck">
                 <BsTelegram />
               </a>
             </div>
@@ -53,12 +52,11 @@ function Hello() {
           className="sm:mt-24 sm:translate-y-[60px] translate-y-[-60px] flex flex-col sm:gap-5 gap-2 items-start desc"
           data-aos="fade"
           data-aos-easing="ease-out-cubic"
-
         >
-          <p className="uppercase font-light sm:text-lg text-base">
+          <p className="uppercase font-light sm:text-lg text-base dark:text-textDarck">
             Frontend Innovation Maestro
           </p>
-          <p className="uppercase font-light sm:text-lg text-base">
+          <p className="uppercase font-light sm:text-lg text-base dark:text-textDarck">
             Based in Sana&lsquo;a
             <br />
             YEMEN
