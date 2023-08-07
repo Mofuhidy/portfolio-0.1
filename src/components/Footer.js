@@ -1,4 +1,4 @@
-import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
+import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from 'react-icons/ai';
 import { FaAngellist } from 'react-icons/fa';
 import { BsTelegram, BsBoxArrowUpRight } from 'react-icons/bs';
 
@@ -26,6 +26,10 @@ function Footer() {
 
         <a href="https://www.t.me/mofuhidy" target="_blank" rel="noreferrer">
           <BsTelegram />
+        </a>
+
+        <a href="https://www.instagram.com/mofuhidy/" target="_blank" rel="noreferrer">
+          <AiFillInstagram />
         </a>
       </div>
     </div>
