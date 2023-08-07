@@ -1,10 +1,17 @@
+import { useEffect } from 'react';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
+import Aos from 'aos';
 import hash from '../assets/ic_languages.svg';
 import frameworks from '../assets/ic_frameworks.svg';
 import skills from '../assets/ic_skills.svg';
 import softSkills from '../assets/ic_soft-skills.svg';
+import 'aos/dist/aos.css';
 
 function AboutMe() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div className="mt-10 sm:mt-0 min-h-screen sm:px-20 p-4 flex flex-col lg:flex-row-reverse lg:justify-center items-center gap-10 mx-auto " id="aboutme">
       <div className="aboutMeParagraph sm:w-1/2">
@@ -34,7 +41,11 @@ function AboutMe() {
       </div>
 
       <div className="cards mt-8 sm:mt-0 sm:pb-0 pb-32 md:grid md:grid-cols-2 gap-4 sm:w-1/2">
-        <div className=" mt-6 md:mt-0 rounded-xl w-full sm:h-72 md:h-auto bg-text p-6">
+        <div
+          className=" mt-6 md:mt-0 rounded-xl w-full sm:h-72 md:h-auto bg-text p-6"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
           <img src={hash} alt="hash icon" className="w-10 h-10 sm:w-12 sm:h-12" />
           <h3 className=" font-bold text-lg text-background mt-6">Languages</h3>
           <ul className="my-6 list-disc pl-4">
@@ -45,7 +56,11 @@ function AboutMe() {
           </ul>
         </div>
 
-        <div className=" mt-6 md:mt-0 rounded-xl w-full sm:h-72 md:h-auto bg-text p-6">
+        <div
+          className=" mt-6 md:mt-0 rounded-xl w-full sm:h-72 md:h-auto bg-text p-6"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
           <img src={frameworks} alt="frameworks icon" className="w-10 h-10 sm:w-12 sm:h-12" />
           <h3 className=" font-bold text-lg text-background mt-6">Frameworks</h3>
           <ul className="my-6 md:mt-0 list-disc pl-4">
@@ -57,7 +72,11 @@ function AboutMe() {
           </ul>
         </div>
 
-        <div className=" mt-6 md:mt-0 rounded-xl w-full sm:h-72 md:h-auto bg-text p-6">
+        <div
+          className=" mt-6 md:mt-0 rounded-xl w-full sm:h-72 md:h-auto bg-text p-6"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
           <img src={skills} alt="skills icon" className="w-10 h-10 sm:w-12 sm:h-12" />
           <h3 className=" font-bold text-lg text-background mt-6">Skills</h3>
           <ul className="my-6 list-disc pl-4">
@@ -75,7 +94,11 @@ function AboutMe() {
           </ul>
         </div>
 
-        <div className=" mt-6 md:mt-0 rounded-xl w-full sm:h-72 md:h-auto bg-text p-6">
+        <div
+          className=" mt-6 md:mt-0 rounded-xl w-full sm:h-72 md:h-auto bg-text p-6"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+        >
           <img src={softSkills} alt="soft skills icon" className="w-10 h-10 sm:w-12 sm:h-12" />
           <h3 className=" font-bold text-lg text-background mt-6">Soft Skills</h3>
           <ul className="my-6 list-disc pl-4">
