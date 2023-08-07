@@ -5,7 +5,7 @@ import MansoryLayout from './MansoryLayout';
 // import two from '../assets/Fuhidy's profile.jpeg'
 function Projects() {
   return (
-    <div className="mt-40 bg-primary min-h-screen md:px-20 py-0 px-4 relative" id="portfolio">
+    <div className="mt-40 bg-primary min-h-auto md:px-20 py-0 px-4 relative" id="portfolio">
       <h2 className="myName sm:text-[6.8rem] text-5xl text-background projectsTitle absolute sm:pt-5 pt-5 ">
         Projects
       </h2>

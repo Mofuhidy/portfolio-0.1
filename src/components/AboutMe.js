@@ -6,7 +6,7 @@ import softSkills from '../assets/ic_soft-skills.svg';
 
 function AboutMe() {
   return (
-    <div className="mt-10 sm:mt-0 min-h-screen sm:px-20 py-0 px-4 flex flex-col lg:flex-row-reverse lg:justify-center items-center gap-10 mx-auto " id="aboutme">
+    <div className="mt-10 sm:mt-0 min-h-screen sm:px-20 p-4 flex flex-col lg:flex-row-reverse lg:justify-center items-center gap-10 mx-auto " id="aboutme">
       <div className="aboutMeParagraph sm:w-1/2">
         <h2 className=" text-2xl sm:text-5xl md:text-7xl font-semibold text-primary myName">
           <p className=" text-sm sm:text-base  text-text font-normal">some words</p>
