@@ -1,8 +1,5 @@
-// import one from '../assets/profile.jpg';
-
 import MansoryLayout from './MansoryLayout';
 
-// import two from '../assets/Fuhidy's profile.jpeg'
 function Projects() {
   return (
     <div className="mt-40 bg-primary min-h-auto md:px-20 py-0 px-4 relative" id="portfolio">

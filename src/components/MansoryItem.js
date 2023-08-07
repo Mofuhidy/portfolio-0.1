@@ -1,6 +1,8 @@
 import Proptypes from 'prop-types';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Aos from 'aos';
 import Modal from './Modal';
+import 'aos/dist/aos.css';
 
 function MansoryItem({ project }) {
   // Function to get a random item from an array
@@ -17,9 +19,14 @@ function MansoryItem({ project }) {
     return setShow(false);
   };
 
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <>
       <li
+        data-aos="fade-up"
         className={`
     projectCard
     bg-gradient-to-t from-accent to-primary rounded-xl 

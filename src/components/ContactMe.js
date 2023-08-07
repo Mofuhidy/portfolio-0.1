@@ -62,7 +62,8 @@ function ContactMe() {
           <button
             type="submit"
             aria-label="Send Message"
-            className="btn rounded-xl bg-background text-text px-14 py-4 mt-10 w-60 text-lg cursor-pointer"
+            className="btn rounded-xl bg-background text-text px-14 py-4 mt-10 w-60 text-lg cursor-pointer
+            hover:transition-opacity hover:bg-accent hover:text-background duration-500 hover:shadow-md"
             id="getInTouch"
           >
             Get in touch
