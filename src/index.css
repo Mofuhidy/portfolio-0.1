@@ -20,9 +20,20 @@ html {
 
 body {
   margin: 0;
-  font-family: "Poppins", "Playfair Display", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    "Poppins",
+    "Playfair Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #faf5f6;
@@ -86,7 +97,10 @@ p {
 
 .navItem a:hover {
   letter-spacing: 1px;
-  transition: ease-in 0.5 cubic-bezier(0.4, 0, 1, 1) 0.3s;
+  transition-property: ease-in-out;
+  transition-duration: 0.5s;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
 @media screen and (min-width: 768px) {
