@@ -7,14 +7,16 @@ import Projects from './components/Projects';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hello />
-      <Projects />
-      <AboutMe />
-      <ContactMe />
-      <Footer />
-    </div>
+    <>
+      <div className="min-h-screen">
+        <Navbar />
+        <Hello />
+        <Projects />
+        <AboutMe />
+        <ContactMe />
+        <Footer />
+      </div>
+    </>
   );
 }
 
