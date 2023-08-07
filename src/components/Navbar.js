@@ -11,11 +11,11 @@ function Navbar() {
   return (
     <nav className=" h-20 flex justify-between items-center md:px-20  py-0 px-4">
       <h1 className=" text-xl">Fuhidy</h1>
-      <ul className=" gap-4 items-center hidden sm:flex">
-        <li><a className="" href="#home">Hello</a></li>
-        <li><a className="" href="#portfolio">Portfolio</a></li>
-        <li><a className="" href="#aboutme">About me</a></li>
-        <li className=" bg-primary text-background py-2 px-4 rounded-3xl"><a className="text-base sm-text-lg" href="#contact">Contact</a></li>
+      <ul className=" gap-4 items-center hidden sm:flex navItem">
+        <li><a href="#home">Hello</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#aboutme">About me</a></li>
+        <li className=" bg-primary text-background py-2 px-4 rounded-3xl hover:drop-shadow-lg"><a className="text-base sm-text-lg" href="#contact">Contact</a></li>
       </ul>
 
       {/* hamburger */}

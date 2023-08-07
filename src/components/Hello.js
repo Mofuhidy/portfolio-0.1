@@ -30,19 +30,19 @@ function Hello() {
 
           <div className="callToAction flex items-center  mt-3 gap-5" data-aos="fade-up-right">
             <a href="#portfolio">
-              <button type="button" className="order-last bg-gradient-to-r from-primary to-accent text-background py-3 px-4 rounded-3xl hidden sm:block btn">See my Works</button>
+              <button type="button" className="order-last bg-gradient-to-r from-primary to-accent text-background py-3 px-4 rounded-3xl hidden sm:block btn hover:shadow-sm hover:translate-y-[-4px] hover:transition-transform">See my Works</button>
             </a>
             <div className="order-last text-2xl sm:text-4xl sm:flex gap-4 text-accent hidden btn">
-              <a href="https://www.linkedin.com/in/mo-fuhidy/" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/mo-fuhidy/" target="_blank" rel="noreferrer" className=" hover:transition-opacity hover:duration-500 hover:text-text">
                 <AiFillLinkedin />
               </a>
-              <a href="https://github.com/Mofuhidy" target="_blank" rel="noreferrer">
+              <a href="https://github.com/Mofuhidy" target="_blank" rel="noreferrer" className=" hover:transition-opacity hover:duration-500 hover:text-text">
                 <AiFillGithub />
               </a>
-              <a href="https://wellfound.com/u/mo-fuhidy" target="_blank" rel="noreferrer">
+              <a href="https://wellfound.com/u/mo-fuhidy" target="_blank" rel="noreferrer" className=" hover:transition-opacity hover:duration-500 hover:text-text">
                 <FaAngellist />
               </a>
-              <a href="https://www.t.me/mofuhidy" target="_blank" rel="noreferrer">
+              <a href="https://www.t.me/mofuhidy" target="_blank" rel="noreferrer" className=" hover:transition-opacity hover:duration-500 hover:text-text">
                 <BsTelegram />
               </a>
             </div>
@@ -64,7 +64,7 @@ function Hello() {
           </p>
         </div>
 
-        <button type="button" className="order-2 bg-gradient-to-r from-primary to-accent text-background py-3 px-4 rounded-3xl  sm:hidden btn translate-x-[-150px]">See my Works</button>
+        <button type="button" className="order-2 bg-gradient-to-r from-primary to-accent text-background py-3 px-4 rounded-3xl  sm:hidden ">See my Works</button>
         <div className="order-1 text-2xl sm:text-4xl flex gap-4  text-accent sm:hidden btn">
           <a href="https://www.linkedin.com/in/mo-fuhidy/" target="_blank" rel="noreferrer">
             <AiFillLinkedin />

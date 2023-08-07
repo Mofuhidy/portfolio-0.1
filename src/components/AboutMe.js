@@ -33,10 +33,12 @@ function AboutMe() {
         </p>
         <a href="#cv" target="_blank">
           <button type="button" className="bg-accent mt-8 w-full text-background py-3 px-4 rounded-3xl sm:hidden">Get my Resume</button>
-          <span className="hidden sm:flex text-primary mt-8 underline items-center gap-2">
-            Get my Resume
-            <BsBoxArrowUpRight className="text-primary" />
-          </span>
+          <a href="../works/01Mohammed AlFuhidy Resume - (fr).pdf" target="_blank">
+            <span className="hidden sm:flex text-primary mt-8  items-center gap-2 hover:underline hover:transition-all">
+              Get my Resume
+              <BsBoxArrowUpRight className="text-primary" />
+            </span>
+          </a>
         </a>
       </div>
 
