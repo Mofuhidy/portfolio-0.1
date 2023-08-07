@@ -18,7 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.body {
   margin: 0;
   font-family:
     "Poppins",
@@ -41,6 +41,13 @@ body {
   background-blend-mode: color-burn;
   background-position: center;
   background-size: contain;
+  transition: ease 1s all;
+}
+
+.body.dark {
+  background-color: #1b0d10;
+  transition: ease 1s all;
+  background-blend-mode: multiply;
 }
 
 p {
@@ -73,7 +80,7 @@ p {
   position: relative;
 }
 
-.navItem a::after {
+.navItem a:not(.toggle)::after {
   content: "";
   position: absolute;
   right: 0;
@@ -88,14 +95,14 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-.navItem a:hover::after {
+.navItem a:not(.toggle):hover::after {
   right: auto;
   left: 0;
   width: 100%;
   background-color: #254b43;
 }
 
-.navItem a:hover {
+.navItem a:not(.toggle):hover {
   letter-spacing: 1px;
   transition-property: ease-in-out;
   transition-duration: 0.5s;
