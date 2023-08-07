@@ -7,8 +7,9 @@ import { useEffect } from 'react';
 
 function Hello() {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1500 });
   }, []);
+
   return (
     <section className="landing md:px-20 py-0 px-4" id="home">
       <div className="flex flex-col sm:flex-row sm:items-center items-start sm:gap-10 gap-5 justify-around">
@@ -63,8 +64,9 @@ function Hello() {
             YEMEN
           </p>
         </div>
-
-        <button type="button" className="order-2 bg-gradient-to-r from-primary to-accent text-background py-3 px-4 rounded-3xl  sm:hidden ">See my Works</button>
+        <a href="#portfolio">
+          <button type="button" className="order-2 bg-gradient-to-r from-primary to-accent text-background py-3 px-4 rounded-3xl  sm:hidden ">See my Works</button>
+        </a>
         <div className="order-1 text-2xl sm:text-4xl flex gap-4  text-accent sm:hidden btn">
           <a href="https://www.linkedin.com/in/mo-fuhidy/" target="_blank" rel="noreferrer">
             <AiFillLinkedin />

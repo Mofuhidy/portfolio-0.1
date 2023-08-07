@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 
 function AboutMe() {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1500 });
   }, []);
 
   return (
@@ -23,7 +23,7 @@ function AboutMe() {
           I am a front-end developer from Yemen who is passionate about learning
           new things every day. I enjoy drinking
           tea, coffee, watching anime, movies, and series, and listening to music.
-          I am currently enrolled in Microverse, a coding bootcamp that is helping
+          I am currently enrolled in Microverse, an online school that is helping
           me to become a better developer.
           I am always looking for new challenges and opportunities to learn and grow.
           I am confident that my passion
