@@ -10,7 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
-
+    container: {
+      center: true,
+    },
     colors: {
       transparent: 'transparent',
       text: '#1b0d10',
