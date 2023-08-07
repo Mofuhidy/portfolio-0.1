@@ -15,11 +15,11 @@ function AboutMe() {
   return (
     <div className="mt-10 sm:mt-0 min-h-screen sm:px-20 p-4 flex flex-col lg:flex-row-reverse lg:justify-center items-center gap-10 mx-auto " id="aboutme">
       <div className="aboutMeParagraph sm:w-1/2">
-        <h2 className=" text-2xl sm:text-5xl md:text-7xl font-semibold dark:text-accentDarck text-primary myName">
+        <h2 className=" text-4xl sm:text-5xl md:text-7xl font-semibold dark:text-accentDarck text-primary myName">
           <p className=" text-sm sm:text-base  text-text dark:text-textDarck font-normal">some words</p>
           About me
         </h2>
-        <p className="text-xs sm:text-sm md:text-lg mt-8  dark:text-textDarck  leading-5 md:leading-7">
+        <p className="text-sm md:text-lg mt-8  dark:text-textDarck  leading-5 md:leading-7">
           I am a front-end developer from Yemen who is passionate about learning
           new things every day. I enjoy drinking
           tea, coffee, watching anime, movies, and series, and listening to music.
