@@ -62,10 +62,10 @@ function Navbar() {
         >
           <CgDarkMode className={`w-8 h-8 ${theme === 'light' ? ' text-text' : 'text-textDarck'} `} />
         </a>
-        <li><a className="p-20 sm-text-lg dark:text-textDarck text-text text-4xl underline" onClick={showNav} href="#home">Hello</a></li>
-        <li><a className="p-20 sm-text-lg dark:text-textDarck text-text text-4xl underline" onClick={showNav} href="#portfolio">Portfolio</a></li>
-        <li><a className="p-20 sm-text-lg dark:text-textDarck text-text text-4xl underline" onClick={showNav} href="#aboutme">About me</a></li>
-        <li><a className="p-20 sm-text-lg dark:text-textDarck text-text text-4xl underline" onClick={showNav} href="#contact">Contact</a></li>
+        <li><a className="pl-20 sm-text-lg dark:text-textDarck text-text text-4xl underline" onClick={showNav} href="#home">Hello</a></li>
+        <li><a className="pl-20 sm-text-lg dark:text-textDarck text-text text-4xl underline" onClick={showNav} href="#portfolio">Portfolio</a></li>
+        <li><a className="pl-20 sm-text-lg dark:text-textDarck text-text text-4xl underline" onClick={showNav} href="#aboutme">About me</a></li>
+        <li><a className="pl-20 sm-text-lg dark:text-textDarck text-text text-4xl underline" onClick={showNav} href="#contact">Contact</a></li>
         <img src={eclipse} alt="circle" className="h-10 pr-60" />
       </ul>
     </nav>
