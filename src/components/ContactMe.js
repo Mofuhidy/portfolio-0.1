@@ -1,4 +1,21 @@
+import { useForm, ValidationError } from '@formspree/react';
+
 function ContactMe() {
+  const [state, handleSubmit] = useForm('mvonlarn');
+  if (state.succeeded) {
+    return (
+      <div className=" bg-primary h-full md:px-20 py-0 px-4 flex flex-col items-center">
+        <article className="text-center mb-6 mt-10 sm:mt-20">
+          <h2 className=" text-5xl sm:text-6xl md:text-7xl font-semibold text-background pt-5 myName">
+            <p>Thanks for contacting!</p>
+          </h2>
+
+        </article>
+      </div>
+
+    );
+  }
+
   return (
     <div className=" bg-primary h-full md:px-20 py-0 px-4 flex flex-col items-center" id="contact">
       <article className="text-center mb-6 mt-10 sm:mt-20">
@@ -11,7 +28,7 @@ function ContactMe() {
           <a className="font-bold pl-2" href="mailto:mo7ammed9290@gmail.com" target="_blank" rel="noreferrer">mo7ammed9290@gmail.com</a>
         </p>
       </article>
-      <form action="https://formspree.io/f/mvonlarn" method="post" className="flex items-center justify-center flex-col w-full  sm:w-3/4 sm:min-w-[500px] my-10 sm:mb-20 px-20" id="contact-form">
+      <form onSubmit={handleSubmit} className="flex items-center justify-center flex-col w-full  sm:w-3/4 sm:min-w-[500px] my-10 sm:mb-20 px-20" id="contact-form">
 
         <div className="w-full relative flex sm:flex-row flex-col justify-between gap-10">
           <label htmlFor="full-name" className="w-full">
@@ -19,6 +36,7 @@ function ContactMe() {
               type="text"
               id="full-name"
               placeholder="Full name"
+              name="fullname"
               maxLength="30"
               required
               aria-required="true"
@@ -29,10 +47,17 @@ function ContactMe() {
             <input
               type="email"
               id="email"
+              name="email"
               placeholder="Email address"
               required
               aria-required="true"
               className="placeholder:text-secondary border-0 p-[1rem] pl-0 relative bg-transparent  border-b-secondary border-b-[1px] border-solid w-full text-background focus:outline-0 focus:border-b-2 focus:border-b-accent focus:border-solid   focus:pl-2"
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+              className="text-[#e83b46]"
             />
           </label>
         </div>
@@ -55,12 +80,18 @@ function ContactMe() {
               aria-required="true"
             />
           </label>
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
         </div>
 
         <div className="buttonContainer">
           <span className="error" />
           <button
             type="submit"
+            disabled={state.submitting}
             aria-label="Send Message"
             className="btn rounded-xl bg-background text-text px-14 py-4 mt-10 w-60 text-lg cursor-pointer
             hover:transition-opacity hover:bg-accent hover:text-background duration-500 hover:shadow-md"
