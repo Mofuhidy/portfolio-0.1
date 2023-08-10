@@ -6,12 +6,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap");
 
+::view-transition-group(root) {
+  animation-duration: 1.25s;
+}
+
+::view-transition-new(root),
+::view-transition-old(root) {
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+  animation-name: reveal-light;
+}
+
+::view-transition-old(root),
+.dark::view-transition-old(root) {
+  animation: none;
+}
+
+.dark::view-transition-new(root) {
+  animation-name: reveal-dark;
+}
+
 :root {
   --Text: #1b0d10;
   --Background: #faf5f6;
   --Primary: #254b43;
   --Secondary: #c5cbe2;
   --Accent: #489383;
+}
+
+@keyframes reveal-dark {
+  from {
+    clip-path: polygon(-30% 0, -30% 0, -15% 100%, -10% 115%);
+  }
+
+  to {
+    clip-path: polygon(-30% 0, 130% 0, 115% 100%, -10% 115%);
+  }
+}
+
+@keyframes reveal-light {
+  from {
+    clip-path: polygon(130% 0, 130% 0, 115% 100%, 110% 115%);
+  }
+
+  to {
+    clip-path: polygon(130% 0, -30% 0, -15% 100%, 110% 115%);
+  }
 }
 
 html {
