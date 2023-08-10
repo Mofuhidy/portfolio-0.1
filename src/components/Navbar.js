@@ -11,6 +11,11 @@ function Navbar() {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
+  const handleView = () => {
+    if (!document.startViewTransition) handleThemeToggle();
+    document.startViewTransition(handleThemeToggle);
+  };
+
   const showNav = () => {
     setNav(!nav);
   };
@@ -28,7 +33,7 @@ function Navbar() {
             aria-label={`Turn On ${
               theme === 'light' ? 'dark' : 'light'
             } Mood`}
-            onClick={handleThemeToggle}
+            onClick={handleView}
             className="toggle"
           >
             <CgDarkMode className={`w-8 h-8 ${theme === 'light' ? ' text-text' : 'text-textDarck'} `} />
@@ -57,7 +62,7 @@ function Navbar() {
           aria-label={`Turn On ${
             theme === 'light' ? 'dark' : 'light'
           } Mood`}
-          onClick={handleThemeToggle}
+          onClick={handleView}
           className="toggle w-8 h-8 z-50 top-[26px] left-[15px] duration-[1500ms] ease-in-out absolute text-text dark:text-textDarck sm:hidden"
         >
           <CgDarkMode className={`w-8 h-8 ${theme === 'light' ? ' text-text' : 'text-textDarck'} `} />
