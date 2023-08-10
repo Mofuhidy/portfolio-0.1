@@ -9,6 +9,7 @@ function Navbar() {
 
   const handleThemeToggle = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
+    document.documentElement.className = theme === 'light' ? 'dark' : 'light';
   };
 
   const handleView = () => {
