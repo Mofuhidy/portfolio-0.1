@@ -62,20 +62,9 @@ html {
 
 .body {
   margin: 0;
-  font-family:
-    "Poppins",
-    "Playfair Display",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Roboto",
-    "Oxygen",
-    "Ubuntu",
-    "Cantarell",
-    "Fira Sans",
-    "Droid Sans",
-    "Helvetica Neue",
-    sans-serif;
+  font-family: "Poppins", "Playfair Display", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #faf5f6;
@@ -152,6 +141,13 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 @media screen and (min-width: 768px) {
   body {
     background-image: url(./assets/sl_072622_51930_13.jpg);
@@ -166,5 +162,6 @@ p {
 @media screen and (max-width: 600px) {
   .projectCard {
     position: sticky;
+    transform: perspective(1200px) scale(0.95) !important;
   }
 }

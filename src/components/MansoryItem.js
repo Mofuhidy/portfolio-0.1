@@ -33,7 +33,8 @@ function MansoryItem({ project, style }) {
     bg-gradient-to-t from-accent to-primary rounded-xl 
      w-full mb-8 
      overflow-hidden 
-     ${heights} 
+     h-[22rem]
+    sm:${heights} 
      relative
       group 
       flex
@@ -63,10 +64,10 @@ function MansoryItem({ project, style }) {
         "
         />
 
-        <div className=" details z-30 transform block sm:opacity-0 sm:translate-y-0  group-hover:sm:opacity-100 group-hover:sm:translate-y-2 duration-300 ease-in">
+        <div className=" details z-30 transform block sm:opacity-0 sm:translate-y-0  group-hover:sm:opacity-100 group-hover:sm:translate-y-2 duration-300 ease-in ">
           <h2 className="mb-2 font-semibold text-background sm:text-xl text-lg">{project.title}</h2>
           {project.shortDescription
-          && <p className="text-background mb-2">{project.shortDescription}</p>}
+          && <p className="text-background mb-2 line-clamp">{project.shortDescription}</p>}
           <ul className="flex flex-wrap">
             {
           project.technology.map((stack) => (
@@ -74,6 +75,7 @@ function MansoryItem({ project, style }) {
           ))
           }
           </ul>
+          <button type="button" className="sm:hidden bg-accent text-background w-full rounded-xl py-1"> go to the project</button>
         </div>
       </li>
       <Modal show={show} project={project} onClose={() => setShow(false)} />
