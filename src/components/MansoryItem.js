@@ -8,7 +8,7 @@ function MansoryItem({ project, style }) {
   // Function to get a random item from an array
   const arrayRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-  const [heights] = useState(arrayRandomItem(['h-80', 'h-96', 'h-[460px]']));
+  const [heights] = useState(arrayRandomItem(['sm:h-80', 'sm:h-96', 'sm:h-[460px]']));
 
   const [show, setShow] = useState(false);
 
@@ -41,8 +41,8 @@ function MansoryItem({ project, style }) {
     bg-gradient-to-t from-accent to-primary rounded-xl 
      w-full mb-8 
      overflow-hidden 
+     ${heights} 
      h-[22rem]
-    sm:${heights} 
      relative
       group 
       flex
