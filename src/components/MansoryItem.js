@@ -34,6 +34,7 @@ function MansoryItem({ project, style }) {
   return (
     <>
       <li
+        data-aos="zoom-in"
         style={style}
         className={`
     projectCard
