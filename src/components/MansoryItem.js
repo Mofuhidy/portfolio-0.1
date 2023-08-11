@@ -16,11 +16,19 @@ function MansoryItem({ project, style }) {
     if (e.key === 'Enter') {
       return setShow(true);
     }
+    if (e.key === 'Escape') {
+      setShow(false);
+    }
     return setShow(false);
   };
 
   useEffect(() => {
     Aos.init({ duration: 1500 });
+    window.addEventListener('keydown', handlePress);
+
+    return () => {
+      window.removeEventListener('keydown', handlePress);
+    };
   }, []);
 
   return (
