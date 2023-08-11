@@ -162,6 +162,6 @@ p {
 @media screen and (max-width: 600px) {
   .projectCard {
     position: sticky;
-    transform: perspective(1200px) scale(0.95) !important;
+    transform-origin: center top;
   }
 }

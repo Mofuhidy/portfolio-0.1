@@ -34,7 +34,6 @@ function MansoryItem({ project, style }) {
   return (
     <>
       <li
-        data-aos="fade-up"
         style={style}
         className={`
     projectCard
