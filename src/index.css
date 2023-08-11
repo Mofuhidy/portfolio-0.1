@@ -28,6 +28,21 @@
   animation-name: reveal-dark;
 }
 
+.projectCard {
+  animation: enter both ease-in-out;
+  animation-timeline: view();
+  animation-range: entry;
+  animation-duration: 1.5s;
+}
+
+@keyframes enter {
+  from {
+    translate: 0 100%;
+    scale: 0.25;
+    opacity: 0.5;
+  }
+}
+
 :root {
   --Text: #1b0d10;
   --Background: #faf5f6;
