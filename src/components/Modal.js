@@ -4,15 +4,28 @@ import { BsBoxArrowUpRight } from 'react-icons/bs';
 import { AiFillGithub } from 'react-icons/ai';
 
 function Modal({ show, project, onClose }) {
+  Modal.defultProp = {
+    closeShow: () => {},
+  };
+
   return (
     <>
       {show && project && (
-      <div className="z-[999] fixed h-full w-full top-0 left-0 backdrop-blur bg-text bg-opacity-5 transition-all ease-linear duration-300 overflow-x-hidden overflow-y-scroll" style={{ marginTop: 0 }}>
+      <div
+        className="z-[999] fixed h-full w-full top-0 left-0 backdrop-blur bg-text bg-opacity-5
+        transition-all ease-linear duration-300 overflow-x-hidden overflow-y-scroll"
+        style={{ marginTop: 0 }}
+        role="presentation"
+        onClick={onClose}
+      >
         <div className=" md:m-[4%] md:mb-32 md:p-14 p-4 m-[2.5%] mt-10 z-[9999] transition-all ease-linear duration-500 bg-text rounded-xl shadow-md ">
           <div className="header">
             <h2 className="title md:text-4xl sm:text-3xl text-lg sm:leading-3 text-background flex items-center justify-between ">
               <span>{project.title}</span>
-              <CgClose className="w-8 h-8 z-50  text-background sm cursor-pointer" onClick={onClose} />
+              <CgClose
+                className="w-8 h-8 z-50  text-background sm cursor-pointer"
+                onClick={onClose}
+              />
             </h2>
             <ul className="flex flex-wrap sm:py-11 py-4">
               {
@@ -60,4 +73,5 @@ Modal.propTypes = {
     technology: propTypes.arrayOf(propTypes.string),
   }).isRequired,
 };
+
 export default Modal;
