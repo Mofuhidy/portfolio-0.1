@@ -18,7 +18,7 @@ function MansoryLayout() {
   }, []);
 
   return (
-    <ul className="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6 relative">
+    <ul className="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6 relative transition duration-1000 ease-in">
       {
       projectsData.map((project, index) => (
         <MansoryItem key={project.title} project={project} style={{ top: windowWidth < 600 ? `${50 + index * 20}px` : 'auto' }} />
