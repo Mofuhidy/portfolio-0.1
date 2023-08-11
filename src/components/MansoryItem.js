@@ -42,7 +42,7 @@ function MansoryItem({ project, style }) {
      w-full mb-8 
      overflow-hidden 
      ${heights} 
-     h-[22rem]
+     h-[26rem]
      relative
       group 
       flex
