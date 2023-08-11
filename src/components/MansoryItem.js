@@ -72,7 +72,7 @@ function MansoryItem({ project, style }) {
         "
         />
 
-        <div className=" details z-30 transform block sm:opacity-0 sm:translate-y-0  group-hover:sm:opacity-100 group-hover:sm:translate-y-2 duration-300 ease-in ">
+        <div className="w-full details z-30 transform block sm:opacity-0 sm:translate-y-0  group-hover:sm:opacity-100 group-hover:sm:translate-y-2 duration-300 ease-in ">
           <h2 className="mb-2 font-semibold text-background sm:text-xl text-lg">{project.title}</h2>
           {project.shortDescription
           && <p className="text-background mb-2 line-clamp">{project.shortDescription}</p>}
@@ -83,7 +83,7 @@ function MansoryItem({ project, style }) {
           ))
           }
           </ul>
-          <button type="button" className=" flex items-center justify-center sm:hidden bg-accent text-background w-full rounded-xl py-1" onClick={() => setShow(true)}> See to the project</button>
+          <button type="button" className=" flex items-center justify-center sm:hidden bg-background text-text shadow-sm w-full rounded-xl py-1" onClick={() => setShow(true)}> See to the project</button>
         </div>
       </li>
       <Modal
