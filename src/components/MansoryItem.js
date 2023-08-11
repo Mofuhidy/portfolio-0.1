@@ -75,10 +75,15 @@ function MansoryItem({ project, style }) {
           ))
           }
           </ul>
-          <button type="button" className="sm:hidden bg-accent text-background w-full rounded-xl py-1"> go to the project</button>
+          <button type="button" className=" flex items-center justify-center sm:hidden bg-accent text-background w-full rounded-xl py-1" onClick={() => setShow(true)}> See to the project</button>
         </div>
       </li>
-      <Modal show={show} project={project} onClose={() => setShow(false)} />
+      <Modal
+        show={show}
+        project={project}
+        onClose={() => setShow(false)}
+        closeShow={() => setShow(false)}
+      />
     </>
   );
 }
@@ -94,6 +99,7 @@ MansoryItem.propTypes = {
     top: Proptypes.string,
   }),
 };
+
 MansoryItem.defaultProps = {
   style: 'top:50px',
 };

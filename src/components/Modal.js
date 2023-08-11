@@ -2,12 +2,34 @@ import propTypes from 'prop-types';
 import { CgClose } from 'react-icons/cg/index';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 import { AiFillGithub } from 'react-icons/ai';
+import { useCallback, useEffect } from 'react';
 
-function Modal({ show, project, onClose }) {
+function Modal({
+  show, project, onClose, closeShow,
+}) {
+  const handleKeyPress = useCallback((e) => {
+    if (e.key === 'Escape') {
+      closeShow();
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyPress);
+    };
+  }, []);
+
   return (
     <>
       {show && project && (
-      <div className="z-[999] fixed h-full w-full top-0 left-0 backdrop-blur bg-text bg-opacity-5 transition-all ease-linear duration-300 overflow-x-hidden overflow-y-scroll" style={{ marginTop: 0 }}>
+      <div
+        className="z-[999] fixed h-full w-full top-0 left-0 backdrop-blur bg-text bg-opacity-5 transition-all ease-linear duration-300 overflow-x-hidden overflow-y-scroll"
+        style={{ marginTop: 0 }}
+        role="presentation"
+        onClick={() => closeShow()}
+      >
         <div className=" md:m-[4%] md:mb-32 md:p-14 p-4 m-[2.5%] mt-10 z-[9999] transition-all ease-linear duration-500 bg-text rounded-xl shadow-md ">
           <div className="header">
             <h2 className="title md:text-4xl sm:text-3xl text-lg sm:leading-3 text-background flex items-center justify-between ">
@@ -51,6 +73,7 @@ function Modal({ show, project, onClose }) {
 Modal.propTypes = {
   show: propTypes.bool.isRequired,
   onClose: propTypes.func.isRequired,
+  closeShow: propTypes.func.isRequired,
   project: propTypes.shape({
     title: propTypes.string,
     image: propTypes.string,
@@ -59,5 +82,9 @@ Modal.propTypes = {
     description: propTypes.string,
     technology: propTypes.arrayOf(propTypes.string),
   }).isRequired,
+};
+
+Modal.defultProp = {
+  closeShow: () => {},
 };
 export default Modal;
