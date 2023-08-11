@@ -4,7 +4,7 @@ import Aos from 'aos';
 import Modal from './Modal';
 import 'aos/dist/aos.css';
 
-function MansoryItem({ project }) {
+function MansoryItem({ project, style }) {
   // Function to get a random item from an array
   const arrayRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -27,6 +27,7 @@ function MansoryItem({ project }) {
     <>
       <li
         data-aos="fade-up"
+        style={style}
         className={`
     projectCard
     bg-gradient-to-t from-accent to-primary rounded-xl 
@@ -62,7 +63,7 @@ function MansoryItem({ project }) {
         "
         />
 
-        <div className="details z-30 transform block sm:opacity-0 sm:translate-y-0  group-hover:sm:opacity-100 group-hover:sm:translate-y-2 duration-300 ease-in">
+        <div className=" details z-30 transform block sm:opacity-0 sm:translate-y-0  group-hover:sm:opacity-100 group-hover:sm:translate-y-2 duration-300 ease-in">
           <h2 className="mb-2 font-semibold text-background sm:text-xl text-lg">{project.title}</h2>
           {project.shortDescription
           && <p className="text-background mb-2">{project.shortDescription}</p>}
@@ -87,6 +88,12 @@ MansoryItem.propTypes = {
     shortDescription: Proptypes.string,
     technology: Proptypes.arrayOf(Proptypes.string),
   }).isRequired,
+  style: Proptypes.shape({
+    top: Proptypes.string,
+  }),
+};
+MansoryItem.defaultProps = {
+  style: 'top:50px',
 };
 
 export default MansoryItem;
