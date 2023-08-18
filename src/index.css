@@ -29,8 +29,10 @@
 }
 
 .projectCard {
-  animation: enter both ease-in-out;
   animation-timeline: view();
+  animation-name: enter;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
   animation-range: entry;
   animation-duration: 1.5s;
 }
