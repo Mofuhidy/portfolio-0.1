@@ -1,5 +1,13 @@
 const projects = [
   {
+    title: 'Budget Beam',
+    image: '../works/budget-beam.png',
+    live: 'https://budget-beam.onrender.com/',
+    repository: 'https://github.com/Mofuhidy/budget-beam',
+    technology: ['Rails', 'Tailwindcss'],
+    shortDescription: 'A mobile web application for budget management: Easily track your expenses by associating transactions with specific categories, enabling you to visualize your spending habits at a glance.',
+    description: 'Budget Beam a simple budget app in which any user can sign up first and then have multiple categories for his expenses. Each category has transactions. It tracks all the transactions, sum them and show them to the user..',
+  }, {
     title: 'Countries Explorer',
     image: '../works/countires-Explorer.png',
     live: 'https://idyllic-dragon-59da6e.netlify.app/',
