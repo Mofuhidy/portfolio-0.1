@@ -21,7 +21,7 @@ function Navbar() {
     setNav(!nav);
   };
   return (
-    <nav className=" h-20 flex justify-between items-center md:px-20  py-0 px-4 ">
+    <nav className=" h-20 flex justify-between items-center md:px-20  py-0 px-4 sticky ">
       <h1 className=" dark:text-textDarck text-text text-xl">Fuhidy</h1>
       <ul className=" gap-4 items-center hidden sm:flex navItem">
         <li><a href="#home" className="dark:text-textDarck text-text">Hello</a></li>

@@ -18,22 +18,22 @@ function Footer() {
       </a>
 
       <div className=" text-lg  sm:text-xl flex gap-4  text-text  transition-all ease-out duration-500 sm:pb-0 pb-4 ">
-        <a href="https://www.linkedin.com/in/mo-fuhidy/" target="_blank" rel="noreferrer" className="dark:text-accentDarck dark:hover:text-textDarck hover:transition-opacity hover:duration-500 hover:text-accent">
+        <a href="https://www.linkedin.com/in/mo-fuhidy/" target="_blank" className="dark:text-accentDarck dark:hover:text-textDarck hover:transition-opacity hover:duration-500 hover:text-accent" rel="noreferrer">
           <AiFillLinkedin />
         </a>
-        <a href="https://github.com/Mofuhidy" target="_blank" rel="noreferrer" className="dark:text-accentDarck dark:hover:text-textDarck hover:transition-opacity hover:duration-500 hover:text-accent">
+        <a href="https://github.com/Mofuhidy" target="_blank" className="dark:text-accentDarck dark:hover:text-textDarck hover:transition-opacity hover:duration-500 hover:text-accent" rel="noreferrer">
           <AiFillGithub />
         </a>
 
-        <a href="https://wellfound.com/u/mo-fuhidy" target="_blank" rel="noreferrer" className="dark:text-accentDarck dark:hover:text-textDarck hover:transition-opacity hover:duration-500 hover:text-accent">
+        <a href="https://wellfound.com/u/mo-fuhidy" target="_blank" className="dark:text-accentDarck dark:hover:text-textDarck hover:transition-opacity hover:duration-500 hover:text-accent" rel="noreferrer">
           <FaAngellist />
         </a>
 
-        <a href="https://www.t.me/mofuhidy" target="_blank" rel="noreferrer" className="dark:text-accentDarck dark:hover:text-textDarck hover:transition-opacity hover:duration-500 hover:text-accent">
+        <a href="https://www.t.me/mofuhidy" target="_blank" className="dark:text-accentDarck dark:hover:text-textDarck hover:transition-opacity hover:duration-500 hover:text-accent" rel="noreferrer">
           <BsTelegram />
         </a>
 
-        <a href="https://www.instagram.com/mofuhidy/" target="_blank" rel="noreferrer" className="dark:text-accentDarck dark:hover:text-textDarck hover:transition-opacity hover:duration-500 hover:text-accent">
+        <a href="https://www.instagram.com/mofuhidy/" target="_blank" className="dark:text-accentDarck dark:hover:text-textDarck hover:transition-opacity hover:duration-500 hover:text-accent" rel="noreferrer">
           <AiFillInstagram />
         </a>
       </div>

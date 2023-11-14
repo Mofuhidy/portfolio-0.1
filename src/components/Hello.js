@@ -29,20 +29,20 @@ function Hello() {
           </h1>
 
           <div className="callToAction flex items-center  mt-3 gap-5" data-aos="fade-up-right">
-            <a href="#portfolio">
+            <a href="#contact">
               <button type="button" className="order-last bg-gradient-to-r from-primary to-accent text-background py-3 px-4 rounded-3xl hidden sm:block btn hover:shadow-sm hover:translate-y-[-4px] hover:transition-transform">See my Works</button>
             </a>
             <div className="order-last text-2xl sm:text-4xl sm:flex gap-4 text-accent hidden btn">
-              <a href="https://www.linkedin.com/in/mo-fuhidy/" target="_blank" rel="noreferrer" className="dark:text-accentDarck hover:transition-opacity hover:duration-500 hover:text-text dark:hover:text-textDarck">
+              <a href="https://www.linkedin.com/in/mo-fuhidy/" target="_blank" className="dark:text-accentDarck hover:transition-opacity hover:duration-500 hover:text-text dark:hover:text-textDarck" rel="noreferrer">
                 <AiFillLinkedin />
               </a>
-              <a href="https://github.com/Mofuhidy" target="_blank" rel="noreferrer" className="dark:text-accentDarck hover:transition-opacity hover:duration-500 hover:text-text dark:hover:text-textDarck">
+              <a href="https://github.com/Mofuhidy" target="_blank" className="dark:text-accentDarck hover:transition-opacity hover:duration-500 hover:text-text dark:hover:text-textDarck" rel="noreferrer">
                 <AiFillGithub />
               </a>
-              <a href="https://wellfound.com/u/mo-fuhidy" target="_blank" rel="noreferrer" className="dark:text-accentDarck hover:transition-opacity hover:duration-500 hover:text-text dark:hover:text-textDarck">
+              <a href="https://wellfound.com/u/mo-fuhidy" target="_blank" className="dark:text-accentDarck hover:transition-opacity hover:duration-500 hover:text-text dark:hover:text-textDarck" rel="noreferrer">
                 <FaAngellist />
               </a>
-              <a href="https://www.t.me/mofuhidy" target="_blank" rel="noreferrer" className="dark:text-accentDarck hover:transition-opacity hover:duration-500 hover:text-text dark:hover:text-textDarck">
+              <a href="https://www.t.me/mofuhidy" target="_blank" className="dark:text-accentDarck hover:transition-opacity hover:duration-500 hover:text-text dark:hover:text-textDarck" rel="noreferrer">
                 <BsTelegram />
               </a>
             </div>
