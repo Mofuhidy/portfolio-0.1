@@ -1,10 +1,7 @@
 # <a name="readme-top"></a>
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-
-  <br/>
-
+ 
   <h3><b>My Portfolio</b></h3>
 
 </div>
@@ -13,7 +10,7 @@
 
 # 📗 Table of Contents
 
-- [](#)
+- [MoFuhidy](#)
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Portfolio project ](#-portfolio-project-)
   - [Live Demo ](#live-demo-)
@@ -42,7 +39,7 @@
 
 ## Live Demo <a name="live-demo"></a>
 
-[MoFuhidy's Portfolio](<[https://(https://mofuhidy.netlify.app/)>)
+[MoFuhidy's Portfolio](https://(https://mofuhidy.netlify.app/)
 
 ## 🛠 Built With <a name="built-with"></a>
 
