@@ -54,7 +54,7 @@ function Hello() {
           data-aos-easing="ease-out-cubic"
         >
           <p className="uppercase font-light sm:text-lg text-base dark:text-textDarck">
-            Frontend Innovation Maestro
+            Full-stack Web Developer
           </p>
           <p className="uppercase font-light sm:text-lg text-base dark:text-textDarck">
             Based in Sana&lsquo;a
