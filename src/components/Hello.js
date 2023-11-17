@@ -11,7 +11,7 @@ function Hello() {
   }, []);
 
   return (
-    <section className="landing md:px-20 py-0 px-4" id="home">
+    <section className="landing md:px-20 py-0 px-4 pt-16" id="home">
       <div className="flex flex-col sm:flex-row sm:items-center items-start sm:gap-10 gap-5 justify-around">
         <div className=" mt-24 flex flex-col sm:gap-5 sm:relative md:relative">
 
