@@ -1,5 +1,13 @@
 const projects = [
   {
+    title: 'Yemen Cargo',
+    image: '../works/yemenCargo.jpg',
+    live: 'https://yemencargo.com/',
+    repository: 'https://github.com/Mofuhidy/yemen-cargo',
+    technology: ['HTML', 'CSS', 'JS'],
+    shortDescription: 'A website for vieweing the services of Yemen Cargo company',
+    description: 'Yemen Cargo is a website for vieweing the services of Yemen Cargo company, it allows the customers to book a cargo and contact with them.',
+  }, {
     title: 'Budget Beam',
     image: '../works/budget-beam.png',
     live: 'https://budget-beam.onrender.com/',
