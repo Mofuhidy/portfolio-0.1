@@ -37,7 +37,7 @@ function MansoryItem({ project, style }) {
         style={style}
         className={`
     projectCard
-    bg-gradient-to-t from-accent to-primary rounded-xl 
+    glass rounded-2xl
      w-full mb-8 
      overflow-hidden 
      ${heights} 
@@ -46,43 +46,44 @@ function MansoryItem({ project, style }) {
       group 
       flex
       items-end
-      p-4
+      p-5
         cursor-pointer
         focus-within:outline-0
         focus:outline-0
+        transition-all
+        duration-500
+        hover:-translate-y-2
+        hover:shadow-[0_20px_40px_-15px_rgba(13,148,136,0.3)]
       `}
         role="presentation"
         onClick={() => setShow(true)}
         onKeyDown={handlePress}
       >
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
         <img
           src={project.image}
           alt={project.title}
           loading="lazy"
-          className=" aspect-auto h-full w-full filter brightness-90 cursor-pointer
-        transition duration-700
-        group-hover:sm:brightness-75
-        group-hover:sm:blur-[2px]
+          decoding="async"
+          className="object-cover h-full w-full cursor-pointer
+        transition-transform duration-700 ease-out
+        group-hover:scale-110
         absolute left-0 top-0
-        bg-center
-        bg-no-repeat
-        group-hover:sm:h-full
-        group-hover:sm:bg-text
         "
         />
 
-        <div className="w-full details z-30 transform block sm:opacity-0 sm:translate-y-0  group-hover:sm:opacity-100 group-hover:sm:translate-y-2 duration-300 ease-in ">
-          <h2 className="mb-2 font-semibold text-background sm:text-xl text-lg">{project.title}</h2>
+        <div className="w-full details z-30 transform block sm:opacity-0 sm:translate-y-4 group-hover:sm:opacity-100 group-hover:sm:translate-y-0 duration-500 ease-out">
+          <h2 className="mb-2 font-bold text-white sm:text-2xl text-xl tracking-wide">{project.title}</h2>
           {project.shortDescription
-          && <p className="text-background mb-2 line-clamp">{project.shortDescription}</p>}
-          <ul className="flex flex-wrap">
+          && <p className="text-gray-200 mb-4 line-clamp-2 text-sm leading-relaxed">{project.shortDescription}</p>}
+          <ul className="flex flex-wrap gap-2">
             {
           project.technology.map((stack) => (
-            <li key={stack} className="my-2 uppercase  bg-secondary py-1 px-4 mr-2 mt-0 text-text text-xs rounded-xl font-medium">{stack}</li>
+            <li key={stack} className="uppercase bg-white/20 backdrop-blur-sm border border-white/30 py-1.5 px-3 text-white text-xs rounded-full font-medium tracking-wider">{stack}</li>
           ))
           }
           </ul>
-          <button type="button" className=" flex items-center justify-center sm:hidden bg-background text-text shadow-sm w-full rounded-xl py-1" onClick={() => setShow(true)}> See to the project</button>
+          <button type="button" className="mt-4 flex items-center justify-center sm:hidden bg-primary text-white shadow-lg w-full rounded-full py-2 font-medium active:scale-95 transition-transform" onClick={() => setShow(true)}> See the project</button>
         </div>
       </li>
       <Modal

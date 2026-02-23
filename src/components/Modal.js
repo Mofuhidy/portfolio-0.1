@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import propTypes from 'prop-types';
 import { CgClose } from 'react-icons/cg/index';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
@@ -8,57 +9,94 @@ function Modal({ show, project, onClose }) {
     closeShow: () => {},
   };
 
+  if (!show || !project) return null;
+
   return (
-    <>
-      {show && project && (
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/click-events-have-key-events
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 backdrop-blur-md bg-black/60 transition-opacity"
+      role="dialog"
+      aria-modal="true"
+      onClick={onClose}
+    >
+      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events */}
       <div
-        className="z-[999] fixed h-full w-full top-0 left-0 backdrop-blur bg-text bg-opacity-5
-        transition-all ease-linear duration-300 overflow-x-hidden overflow-y-scroll"
-        style={{ marginTop: 0 }}
-        role="presentation"
-        onClick={onClose}
+        className="w-full max-w-6xl max-h-[90vh] overflow-y-auto bg-background dark:bg-backgroundDarck rounded-3xl shadow-2xl relative flex flex-col xl:flex-row overflow-hidden border border-secondary/20 dark:border-secondaryDarck/20 animate-in zoom-in-95 duration-300"
+        onClick={(e) => e.stopPropagation()}
       >
-        <div className=" md:m-[4%] md:mb-32 md:p-14 p-4 m-[2.5%] mt-10 z-[9999] transition-all ease-linear duration-500 bg-text rounded-xl shadow-md ">
-          <div className="header">
-            <h2 className="title md:text-4xl sm:text-3xl text-lg sm:leading-3 text-background flex items-center justify-between ">
-              <span>{project.title}</span>
-              <CgClose
-                className="w-8 h-8 z-50  text-background sm cursor-pointer"
-                onClick={onClose}
-              />
-            </h2>
-            <ul className="flex flex-wrap sm:py-11 py-4">
-              {
-          project.technology.map((stack) => (
-            <li key={stack} className="my-2 uppercase  bg-secondary py-1 px-4 mr-2 mt-0 text-text text-xs sm:text-base rounded-xl  font-medium">{stack}</li>
-          ))
-          }
-            </ul>
-          </div>
-          <div className="flex sm:flex-row flex-col gap-8">
-            <div className="flex-1 ">
-              <a href={project.live} target="_blank" rel="noreferrer"><img src={project.image} alt={project.title} loading="lazy" className="max-h-80 w-full object-cover rounded-xl" /></a>
-            </div>
-            <div className="description  flex-1 text-background md:text-base text-base mt-4 relative">
-              {project.description}
-              <div className="action flex  sm:gap-16 justify-around items-center w-full sm:mt-9 mt-4">
-                <a className="underline transition-all ease-out duration-500 flex text-xl font-normal text-accent items-center gap-2 sm:pt-0 pt-4" href={project.live} target="_blank" rel="noreferrer">
-                  See live
-                  <BsBoxArrowUpRight className=" text-base" />
-                </a>
+        {/* Close button for mobile - absolute top right */}
+        <button
+          type="button"
+          onClick={onClose}
+          className="xl:hidden absolute top-4 right-4 z-50 p-2 bg-black/40 hover:bg-black/60 backdrop-blur-md rounded-full text-white transition-colors"
+          title="Close modal"
+        >
+          <CgClose className="w-5 h-5" />
+        </button>
 
-                <a className="underline transition-all ease-out duration-500 flex text-xl font-normal text-accent items-center gap-2 sm:pt-0 pt-4" href={project.repository} target="_blank" rel="noreferrer">
-                  See source
-                  <AiFillGithub />
-                </a>
-              </div>
-            </div>
-          </div>
-
+        {/* Left Side: Image */}
+        <div className="w-full xl:w-1/2 bg-secondary/10 dark:bg-secondaryDarck/30 flex items-center justify-center min-h-[35vh] xl:min-h-[65vh] relative group overflow-hidden">
+          <img
+            src={project.image}
+            alt={project.title}
+            loading="lazy"
+            className="w-full h-full object-cover xl:absolute inset-0 transition-transform duration-700 group-hover:scale-105"
+          />
         </div>
+
+        {/* Right Side: Content */}
+        <div className="w-full xl:w-1/2 p-6 sm:p-10 xl:p-12 flex flex-col justify-center bg-background dark:bg-backgroundDarck">
+          <div className="flex justify-between items-start mb-6">
+            <h2 className="title text-3xl sm:text-4xl font-bold text-text dark:text-textDarck leading-tight">
+              {project.title}
+            </h2>
+            <button
+              type="button"
+              onClick={onClose}
+              className="hidden xl:block p-2 text-text/60 hover:text-primary dark:text-textDarck/60 dark:hover:text-primaryDarck transition-colors"
+              title="Close modal"
+            >
+              <CgClose className="w-8 h-8" />
+            </button>
+          </div>
+
+          <ul className="flex flex-wrap gap-2 mb-8">
+            {project.technology.map((stack) => (
+              <li key={stack} className="uppercase bg-primary/10 dark:bg-primaryDarck/10 text-primary dark:text-primaryDarck py-1.5 px-4 text-xs font-bold tracking-wider rounded-full">
+                {stack}
+              </li>
+            ))}
+          </ul>
+
+          <p className="text-text/80 dark:text-textDarck/80 md:text-lg text-base leading-relaxed mb-10 lg:pr-8">
+            {project.description}
+          </p>
+
+          <div className="flex flex-wrap gap-4 mt-auto">
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center justify-center gap-2 bg-primary dark:bg-primaryDarck text-background dark:text-textDarck px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all hover:-translate-y-1 shadow-lg shadow-primary/30"
+            >
+              See live
+              <BsBoxArrowUpRight className="text-lg transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+            </a>
+
+            <a
+              href={project.repository}
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center justify-center gap-2 border-2 border-primary dark:border-primaryDarck text-primary dark:text-primaryDarck px-8 py-3 rounded-full font-medium hover:bg-primary hover:text-white dark:hover:bg-primaryDarck dark:hover:text-white transition-all hover:-translate-y-1"
+            >
+              See source
+              <AiFillGithub className="text-xl" />
+            </a>
+          </div>
+        </div>
+
       </div>
-      )}
-    </>
+    </div>
   );
 }
 Modal.propTypes = {

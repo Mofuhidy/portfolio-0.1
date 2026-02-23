@@ -1,8 +1,8 @@
 const projects = [
-   {
+  {
     title: 'Hira | حيرة',
-    image: '../works/hira.png', 
-    live: 'https://tryhira.com', 
+    image: '../works/hira.png',
+    live: 'https://tryhira.com',
     repository: 'https://github.com/Mofuhidy/hira',
     technology: ['Next.js', 'Supabase', 'AI'],
     shortDescription: 'An AI-powered application to help with daily meal decisions based on available ingredients.',
@@ -10,23 +10,23 @@ const projects = [
   },
   {
     title: 'Vibecurb',
-    image: '../works/vibecurb.png', 
-    live: 'https://vibecurb.vercel.app/', 
+    image: '../works/vibecurb.png',
+    live: 'https://vibecurb.vercel.app/',
     repository: 'https://github.com/Mofuhidy/vibecurb',
-    technology: ['AI', 'Security Tooling', 'JavaScript'],
+    technology: ['AI', 'Security Tooling', 'TypeScript'],
     shortDescription: 'A security tool designed to check for vulnerabilities and flaws in AI-generated code.',
     description: 'Vibecurb is an automated security review tool that acts as a safeguard for developers utilizing AI for code generation. It analyzes AI-generated code snippets to identify potential security vulnerabilities and logical errors before they reach production environments.',
   },
   {
     title: 'Lahza | لحظة',
-    image: '../works/lahza.png', 
+    image: '../works/lahza.png',
     live: 'https://thmanyah-ai-discovery.vercel.app/',
     repository: 'https://github.com/Mofuhidy/Thmanyah_AI_Discovery',
     technology: ['Next.js', 'AI', 'Semantic Search'],
     shortDescription: 'A semantic search engine built for the podcast archive of Thmanyah.',
     description: 'Lahza is an advanced AI-powered semantic search engine tailored for Thmanyah podcasts. It allows users to search through massive podcast archives using natural language, finding specific topics and moments across hundreds of hours of audio content seamlessly.',
   },
- 
+
   {
     title: 'Yemen Cargo',
     image: '../works/yemenCargo.jpg',
