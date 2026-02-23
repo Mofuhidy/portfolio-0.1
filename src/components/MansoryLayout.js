@@ -4,12 +4,20 @@ import ProjectsContext from '../utils/ProjectsData';
 
 function MansoryLayout() {
   const projectsData = useContext(ProjectsContext);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [columns, setColumns] = useState(3);
+
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      if (window.innerWidth < 640) {
+        setColumns(1);
+      } else if (window.innerWidth < 768) {
+        setColumns(2);
+      } else {
+        setColumns(3);
+      }
     };
 
+    handleResize(); // trigger on mount
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -17,15 +25,26 @@ function MansoryLayout() {
     };
   }, []);
 
-  return (
-    <ul className="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6 relative transition duration-1000 ease-in">
-      {
-      projectsData.map((project, index) => (
-        <MansoryItem key={project.title} project={project} style={{ top: windowWidth < 600 ? `${50 + index * 20}px` : 'auto' }} />
-      ))
+  const columnWrappers = Array.from({ length: columns }, () => []);
+  projectsData.forEach((project, index) => {
+    columnWrappers[index % columns].push(project);
+  });
 
-      }
-    </ul>
+  return (
+    <div className="flex gap-6 w-full relative transition duration-1000 ease-in">
+      {columnWrappers.map((column, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <ul key={`column-${index}`} className="flex-1 flex flex-col space-y-6">
+          {column.map((project) => (
+            <MansoryItem
+              key={project.title}
+              project={project}
+              style={{ top: columns === 1 ? `${50 + projectsData.indexOf(project) * 20}px` : 'auto' }}
+            />
+          ))}
+        </ul>
+      ))}
+    </div>
   );
 }
 export default MansoryLayout;

@@ -21,12 +21,12 @@ function Navbar() {
     setNav(!nav);
   };
   return (
-    <nav className=" h-16 flex justify-between items-center md:px-20  py-0 px-4 fixed top-0 z-50 w-full bg-background dark:bg-backgroundDarck shadow-sm ">
-      <h1 className=" dark:text-textDarck text-text text-xl">Fuhidy</h1>
+    <nav className="glass h-16 flex justify-between items-center md:px-20 py-0 px-6 fixed top-0 z-50 w-full transition-all duration-300">
+      <h1 className=" dark:text-textDarck text-primary text-xl">Fuhidy</h1>
       <ul className=" gap-4 items-center hidden sm:flex navItem">
-        <li><a href="#home" className="dark:text-textDarck text-text">Hello</a></li>
-        <li><a href="#portfolio" className="dark:text-textDarck text-text">Portfolio</a></li>
-        <li><a href="#aboutme" className="dark:text-textDarck text-text">About me</a></li>
+        <li><a href="#home" className="dark:text-textDarck text-text px-2 py-2 rounded-md transition-colors hover:text-primary dark:hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">Hello</a></li>
+        <li><a href="#portfolio" className="dark:text-textDarck text-text px-2 py-2 rounded-md transition-colors hover:text-primary dark:hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">Portfolio</a></li>
+        <li><a href="#aboutme" className="dark:text-textDarck text-text px-2 py-2 rounded-md transition-colors hover:text-primary dark:hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">About me</a></li>
         <li className="dark:bg-primaryDarck bg-primary text-background py-2 px-4 rounded-3xl hover:drop-shadow-lg"><a className="text-base sm-text-lg" href="#contact">Contact</a></li>
         <li>
           <a
@@ -54,8 +54,8 @@ function Navbar() {
       )}
 
       {/* second nav */}
-      <ul className={`h-full pt-32 gap-12 fixed top-[0px] flex flex-col w-full sm:hidden dark:bg-backgroundDarck bg-background z-40 duration-1000 ease-in-out overflow-y-hidden ${
-        nav ? 'right-[0px] opacity-100' : 'right-[-100%] opacity-50'
+      <ul className={`bg-background/95 dark:bg-backgroundDarck/95 backdrop-blur-3xl h-[100vh] pt-32 gap-12 fixed top-[0px] flex flex-col w-full sm:hidden z-40 duration-700 ease-in-out overflow-y-hidden rounded-none border-0 ${
+        nav ? 'right-[0px] opacity-100' : 'right-[-100%] opacity-0'
       } `}
       >
         <a

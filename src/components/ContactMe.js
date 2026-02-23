@@ -19,8 +19,8 @@ function ContactMe() {
   return (
     <div className=" bg-primary h-full md:px-20 py-0 px-4 flex flex-col items-center" id="contact">
       <article className="text-center mb-6 mt-10 sm:mt-20">
-        <h2 className=" text-5xl sm:text-6xl md:text-7xl font-semibold text-background pt-5 myName">
-          <p className=" text-sm sm:text-base text-background font-normal">Interested in collaborating?</p>
+        <h2 className="myName text-5xl sm:text-6xl md:text-[80px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-background to-background/70 tracking-tight pt-5">
+          <p className="text-sm sm:text-lg text-background/80 font-medium uppercase tracking-widest mb-4 font-sans">Interested in collaborating?</p>
           Contact me
         </h2>
         <p className="pt-5 text-background">
@@ -40,7 +40,7 @@ function ContactMe() {
               maxLength="30"
               required
               aria-required="true"
-              className="border-0 p-[1rem] pl-0 relative bg-transparent  border-b-secondary border-b-[1px] border-solid w-full placeholder:text-secondary text-background focus:outline-0 focus:border-b-2 focus:border-b-accent focus:border-solid  focus:pl-2"
+              className="border-0 p-4 pl-0 relative bg-transparent border-b-secondary/50 border-b-2 border-solid w-full placeholder:text-secondary/70 text-background focus:outline-0 focus:border-b-accent transition-all duration-300 focus:pl-4 focus:bg-white/5 rounded-t-lg"
             />
           </label>
           <label htmlFor="email" className="w-full">
@@ -51,7 +51,7 @@ function ContactMe() {
               placeholder="Email address"
               required
               aria-required="true"
-              className="placeholder:text-secondary border-0 p-[1rem] pl-0 relative bg-transparent  border-b-secondary border-b-[1px] border-solid w-full text-background focus:outline-0 focus:border-b-2 focus:border-b-accent focus:border-solid   focus:pl-2"
+              className="placeholder:text-secondary/70 border-0 p-4 pl-0 relative bg-transparent border-b-secondary/50 border-b-2 border-solid w-full text-background focus:outline-0 focus:border-b-accent transition-all duration-300 focus:pl-4 focus:bg-white/5 rounded-t-lg"
             />
             <ValidationError
               prefix="Email"
@@ -68,13 +68,7 @@ function ContactMe() {
               name="message"
               id="text-area-msg"
               maxLength="500"
-              className="placeholder:text-secondary border-0 p-[1rem]
-              pl-0 relative bg-transparent border-b-secondary border-b-[1px]
-              border-solid
-            focus:outline-0 focus:border-b-2 focus:border-accent  focus:border-solid  focus:pl-2
-              w-full
-              text-background
-              mt-10"
+              className="placeholder:text-secondary/70 border-0 p-4 pl-0 relative bg-transparent border-b-secondary/50 border-b-2 border-solid focus:outline-0 focus:border-b-accent transition-all duration-300 focus:pl-4 focus:bg-white/5 rounded-t-lg w-full text-background mt-10 min-h-[120px] resize-y"
               placeholder="Write me something..."
               required
               aria-required="true"
@@ -93,11 +87,20 @@ function ContactMe() {
             type="submit"
             disabled={state.submitting}
             aria-label="Send Message"
-            className="btn rounded-xl bg-background text-text px-14 py-4 mt-10 w-60 text-lg cursor-pointer
-            hover:transition-opacity hover:bg-accent hover:text-background duration-500 hover:shadow-md"
+            aria-busy={state.submitting}
+            className="btn rounded-full bg-white text-primary font-bold px-14 py-4 mt-12 w-64 text-lg cursor-pointer
+            hover:bg-accent hover:text-white transition-all duration-300 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)] active:scale-95 disabled:opacity-50 disabled:cursor-wait flex items-center justify-center gap-2 mx-auto"
             id="getInTouch"
           >
-            Get in touch
+            {state.submitting ? (
+              <>
+                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                </svg>
+                Sending...
+              </>
+            ) : 'Get in touch'}
           </button>
         </div>
       </form>

@@ -5,13 +5,10 @@ import { BsTelegram, BsBoxArrowUpRight } from 'react-icons/bs';
 function Footer() {
   return (
 
-    <div className=" bg-background dark:bg-backgroundDarck flex sm:flex-row flex-col justify-around items-center h-20 sm:h-20 gap-4">
+    <div className="border-t border-secondary/20 dark:border-secondaryDarck/20 bg-transparent backdrop-blur-sm flex sm:flex-row flex-col justify-around items-center h-24 sm:h-20 gap-4 mt-10">
 
-      <a href="../works/01Mohammed AlFuhidy Resume - (fr).pdf" target="_blank">
-
-        <span className="transition-all ease-out duration-500 flex text-base font-normal text-text  dark:text-accentDarck items-center gap-2
-      cursor-pointer sm:pt-0 pt-4 hover:underline hover:transition-all"
-        >
+      <a href="../works/01Mohammed AlFuhidy Resume - (fr).pdf" target="_blank" rel="noreferrer">
+        <span className="transition-all ease-out duration-500 flex text-base font-medium text-text dark:text-textDarck items-center gap-2 cursor-pointer sm:pt-0 pt-4 hover:text-primary dark:hover:text-primaryDarck">
           Get my Resume
           <BsBoxArrowUpRight className="text-text text-base dark:text-accentDarck " />
         </span>
